@@ -1,11 +1,9 @@
 import React from 'react'
 import { render } from 'react-dom'
-// import './index.css'
 import '../node_modules/tachyons/css/tachyons.css'
 import App from './App'
 import registerServiceWorker from './registerServiceWorker'
 
-import gql from 'graphql-tag'
 import { ApolloProvider } from 'react-apollo'
 import { ApolloClient } from 'apollo-client'
 import { HttpLink } from 'apollo-link-http'
