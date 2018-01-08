@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 
@@ -22,11 +22,11 @@ const Blog = ({data: {loading, error, posts}}) => {
     return <p>Error: {error.message}</p>
   } else {
     return (
-      <div className="mw7 pa3 pa5-ns center avenir">
+      <Fragment>
         {posts.map((post) =>
           <Post key={post.id} {...post} />
         )}
-      </div>
+      </Fragment>
     )
   }
 }
