@@ -22,7 +22,7 @@ const Blog = ({data: {loading, error, posts}}) => {
     return <p>Error: {error.message}</p>
   } else {
     return (
-      <div className="mw7 center avenir">
+      <div className="mw7 pa3 pa5-ns center avenir">
         {posts.map((post) =>
           <Post key={post.id} {...post} />
         )}
