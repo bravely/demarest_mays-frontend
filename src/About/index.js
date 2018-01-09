@@ -12,13 +12,13 @@ const About = () => {
     <h1 className="f2-m fw1">About</h1>
     <p>
       <a href={resume} onClick={e => ReactGA.pageview(`Resume Download: ${resume}`)} target="_blank" className="mr2">Resume</a>
-      <a href="https://www.twitter.com/_bravely" onClick={e => ReactGA.pageview("Twitter: https://www.twitter.com/_bravely")} target="_blank" className="mr2">
+      <a href="https://www.twitter.com/_bravely" onClick={e => ReactGA.pageview("Twitter: https://www.twitter.com/_bravely")} target="_blank" rel="noopener noreferrer" className="mr2">
         <FontAwesomeIcon icon={faTwitter} className="blue" />
       </a>
-      <a href="https://www.github.com/bravely" onClick={e => ReactGA.pageview("Github: https://www.github.com/bravely")} target="_blank" className="mr2">
+      <a href="https://www.github.com/bravely" onClick={e => ReactGA.pageview("Github: https://www.github.com/bravely")} target="_blank" rel="noopener noreferrer" className="mr2">
         <FontAwesomeIcon icon={faGithub} className="black" />
       </a>
-      <a href="https://www.linkedin.com/in/bravely" onClick={e => ReactGA.pageview("Linkedin: https://www.github.com/bravely")} target="_blank" className="mr2">
+      <a href="https://www.linkedin.com/in/bravely" onClick={e => ReactGA.pageview("Linkedin: https://www.github.com/bravely")} target="_blank" rel="noopener noreferrer" className="mr2">
         <FontAwesomeIcon icon={faLinkedin} className="dark-blue" />
       </a>
     </p>
