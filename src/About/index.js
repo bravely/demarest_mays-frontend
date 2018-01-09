@@ -1,11 +1,14 @@
 import React, { Fragment } from 'react'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import { faTwitter, faGithub } from '@fortawesome/fontawesome-free-brands'
+import ReactGA from 'react-ga'
 
 import resume from './jake_mays_resume_201801.pdf'
 
-const About = () => (
-  <Fragment>
+const About = () => {
+  ReactGA.pageview(window.location.pathname + window.location.search)
+
+  return (<Fragment>
     <h1 className="f2-m fw1">About</h1>
     <p>
       <a href={resume} className="mr2">Resume</a>
@@ -28,7 +31,7 @@ const About = () => (
     <p className="measure lh-copy">
       Feel free to say hi on Twitter! That's where I'm most likely to see it right now.
     </p>
-  </Fragment>
-)
+  </Fragment>)
+}
 
 export default About

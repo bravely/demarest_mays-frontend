@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
+import ReactGA from 'react-ga'
 
 import Post from './Post'
 
@@ -21,6 +22,8 @@ const Blog = ({data: {loading, error, posts}}) => {
   } else if (error) {
     return <p>Error: {error.message}</p>
   } else {
+    ReactGA.pageview(window.location.pathname + window.location.search)
+    
     return (
       <Fragment>
         {posts.map((post) =>
